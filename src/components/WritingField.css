@@ -1,0 +1,26 @@
+.writingField{
+    padding:2rem;
+    width: 100%;
+}
+
+.writingField input{
+    width: 900px;
+}
+
+#settedTime{
+    float:right;
+}
+
+.timeDisplay{
+    font-size: 2rem;
+}
+
+.writingField .menu{
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.writingField Button {
+    border-top-left-radius: 4px!important;
+    border-bottom-left-radius: 4px!important;
+}

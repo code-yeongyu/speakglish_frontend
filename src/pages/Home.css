@@ -1,0 +1,75 @@
+.home {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home .subject{
+    font-size: 5rem;
+    margin-top: 7%;
+    display: block;
+}
+
+.home .subject #red{
+    font-weight: 800;
+    color: tomato;
+}
+
+.home #startButton {
+    margin-bottom: 7%;
+    margin-top: 7%;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+p{
+    display: block;
+    font-size: 2rem;
+}
+
+.introForMobile {
+    display: None;
+}
+
+@media (max-width:900px){
+    .home {
+        overflow: auto;
+    }
+    .home .subject span{
+        margin-top: 0%;
+        font-size: 4rem;
+    }
+    .home p{
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width:1280px){
+    .home {
+        overflow: auto;
+        text-align: center;
+    }
+    .home .subject{
+        font-size: 7rem;
+        margin-top: 10%;
+    }
+    .home .subject #red{
+        margin-top: 4rem;
+        display: block;
+    }
+    .home #startButton {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    p {
+        font-size: 4rem;
+        bottom: 4%;
+        text-align: center;
+    }
+    .introForMobile {
+        display: unset;
+    }
+}

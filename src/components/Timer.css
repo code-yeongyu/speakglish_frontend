@@ -1,0 +1,22 @@
+.timer {
+    text-align: center;
+}
+
+.timer .fa-clock-o {
+    font-size: 5rem;
+}
+
+.timer #timerInput{
+    margin-top: 20px;
+}
+
+.timer span{
+    margin : 2rem;
+    font-size: 1.5rem;
+    display:block;
+}
+
+.timer #startButton {
+    margin-top:30px;
+    padding : 1rem;
+}

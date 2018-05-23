@@ -1,0 +1,31 @@
+.loginBody{
+    background: white;
+    overflow: hidden;
+}
+.login{
+    width:100%;
+    text-align: center;
+    overflow: hidden;
+    padding-top:10%;
+}
+
+.login span{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.login #passwordResetButton{
+    margin-left: 20%;
+}
+
+.fields{
+    margin-top:5%;
+}
+
+input{
+    width:400px;
+}
+
+#loginButton{
+    margin-top: 5%;
+}

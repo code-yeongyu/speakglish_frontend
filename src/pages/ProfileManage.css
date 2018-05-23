@@ -1,0 +1,30 @@
+.profileManageBody{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 4rem;
+}
+
+.profileManage{
+    margin : 30px;
+}
+
+.profileManage .subjects{
+    margin-left: 30%;
+    
+}
+
+.profileInputFields {
+    text-align: center;
+}
+
+.profileManage .profileInput {
+    display: block;
+    margin-bottom: 15px;
+    width: 300px;
+}
+
+#doneButton{
+    float:right;
+    margin-right: 30%;
+}

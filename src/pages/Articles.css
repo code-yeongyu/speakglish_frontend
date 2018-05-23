@@ -1,0 +1,10 @@
+.articlesBody {
+    width: 100%;
+    height: 100%;
+}
+.articlesBody .articles {
+    word-wrap: break-word;
+    margin-left: 20px;
+    align-content: stretch;
+    word-break:break-all;
+}

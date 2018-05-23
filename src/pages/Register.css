@@ -1,0 +1,68 @@
+.register{
+    background:white;
+    overflow: auto;
+    height:100%;
+}
+
+.left{
+    margin-left: 5%;
+    margin-top: 5%;
+    float: left;
+}
+
+.left #subject{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.left .fields{
+    width:100%;
+    margin: 10%;
+}
+
+.left .fields input{
+    width:300px;
+    padding-top: 10%;
+    padding-bottom: 10px;
+}
+
+.left #registerButton {
+    margin-top: 25%;
+}
+
+.left #loginButton {
+    left:50%;
+}
+
+.right{
+    padding-top: 7%;
+    background: #90cbce;
+    border-left: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    width:50%;
+    float: right;
+}
+
+.right span{
+    padding-left: 4%;
+    font-weight: 600;
+    height: 100%;
+    display:block;
+    font-size: 2.3rem;
+}
+
+@media (max-width:1000px){
+    .register {
+        overflow-x: hidden;
+    }
+    .left {
+        float: unset;
+        width:100%;
+    }
+    .right {
+        float: unset;
+        width: 100%;
+    }
+}

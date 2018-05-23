@@ -1,0 +1,39 @@
+.header {
+    background-color: tomato;
+    color: white;
+    font-size: 2rem;
+    padding: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+}
+
+.greeting{
+    font-weight: 200;
+    font-size: 1.5rem;
+    position: absolute;
+    right:0%;
+    padding-right: 10px;
+}
+
+.greeting #logOutButton{
+    padding-left:10px;
+    font-weight: 500;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* 기본이나, 크롬이나 오페라에서만 작동함. */
+}
+
+@media(max-width:670px){
+    .greeting{
+        visibility: hidden;
+    }
+    .greeting #logOutButton{
+        visibility: visible;
+    }
+}

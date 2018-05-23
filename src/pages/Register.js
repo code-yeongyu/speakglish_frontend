@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import DjangoCSRFToken from 'django-react-csrftoken';
 import axios from 'axios';
 import {URL} from '../config/Api';
+import {RegisterWarning} from '../components';
 
 axios.defaults.xsrfCookieName = 'csrftoken';
 axios.defaults.xsrfHeaderName = 'X-CSRFToken';
@@ -27,12 +28,30 @@ export class Register extends Component{
             },
             body: 'username='+this.state.name+"&email="+this.state.email+
             "&password1="+this.state.password+"&password2="+this.state.password
+        }).then((response)=> response.json())
+        .then(json=>{
+            if(!json.account_created){
+                this.showWarning();
+            }
         })
+    }
+    showWarning = () => {
+        this.setState({
+            ...this.state,
+            warningVisibility: true
+        })
+        setTimeout(() => {
+            this.setState({
+                ...this.state,
+                warningVisibility: false
+            })
+        }, 1500);
     }
     state = {
         name: "",
         email: "",
-        password: "" 
+        password: "",
+        warningVisibility: false
     }
     handleNameChange = (e) =>{
         this.setState({
@@ -51,7 +70,7 @@ export class Register extends Component{
     }
 
 
-    render (){
+    render () {
         return (
             <div className="register">
                 <div className="left">
@@ -66,8 +85,9 @@ export class Register extends Component{
                     </Link>
                     <br/>
                     <form className="fields" onSubmit={this.handleSubmit}>
+                        {this.state.warningVisibility ? <RegisterWarning /> : null}
                         <DjangoCSRFToken/>
-                        <Input onChange={this.handleNameChange} type="text" placeholder='이름' /><br/><br/>
+                        <Input onChange={this.handleNameChange} type="text" placeholder='UserName' /><br/><br/>
                         <Input onChange={this.handleEmailChange} type="email" placeholder='이메일' /><br/><br/>
                         <Input onChange={this.handlePassChange} type="password" placeholder='비밀번호' /><br/>
                         <Button type="submit" size="huge" id="registerButton" animated="fade" color="red">
@@ -85,7 +105,7 @@ export class Register extends Component{
                     <span><Icon name="pencil" /> 당신의 컴퓨터가 받아 쓴답니다</span>
                 </div>
             </div>
-        );
+        )
     }
 }
 

@@ -28,7 +28,7 @@ export class Home extends Component {
                     당신은 당신의 생각보다 영어를 잘합니다.
                     <br />
                     타이머를 지정하고, 어떤 말이든 해보세요.
-                    <br />본 웹앱의 애니메이션은
+                    <br />본 웹앱의 애니메이션은{" "}
                     <a href="http://anicollection.github.io/#/bouncing_entrances/bounceIn">
                         이곳
                     </a>

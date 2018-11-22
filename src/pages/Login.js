@@ -107,40 +107,35 @@ export class Login extends Component {
                     </Link>
                     <br />
                     <div className="fields">
-                        <form
-                            onSubmit={() => {
+                        <Input
+                            type="name"
+                            placeholder="UserName"
+                            onChange={this.updateEmailInputValue}
+                        />
+                        <br />
+                        <br />
+                        <Input
+                            type="password"
+                            placeholder="비밀번호"
+                            onChange={this.updatePassInputValue}
+                        />
+                        <br />
+                        <Button
+                            type="submit"
+                            onClick={() => {
                                 this.handleLogin(
                                     this.state.emailInputValue,
                                     this.state.passInputValue
                                 );
                             }}
+                            size="huge"
+                            id="loginButton"
+                            animated="fade"
+                            color="red"
                         >
-                            <Input
-                                type="email"
-                                placeholder="UserName"
-                                onChange={this.updateEmailInputValue}
-                            />
-                            <br />
-                            <br />
-                            <Input
-                                type="password"
-                                placeholder="비밀번호"
-                                onChange={this.updatePassInputValue}
-                            />
-                            <br />
-                            <Button
-                                type="submit"
-                                size="huge"
-                                id="loginButton"
-                                animated="fade"
-                                color="red"
-                            >
-                                <Button.Content visible>로그인</Button.Content>
-                                <Button.Content hidden>
-                                    SpeakGlish!
-                                </Button.Content>
-                            </Button>
-                        </form>
+                            <Button.Content visible>로그인</Button.Content>
+                            <Button.Content hidden>SpeakGlish!</Button.Content>
+                        </Button>
                     </div>
                 </div>
             </div>

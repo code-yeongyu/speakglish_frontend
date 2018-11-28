@@ -133,7 +133,7 @@ export class Write extends Component {
     });
   };
   resumeMic = () => {
-    this.recognition.stop();
+    this.recognition.start();
     this.setState({
       isMicWorking: true
     });

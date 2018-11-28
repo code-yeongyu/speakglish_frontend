@@ -133,6 +133,13 @@ export class Article extends Component {
         this.requestPatch();
         this.props.history.push("/articles");
     };
+    addAMinute = () => {
+        this.setState({
+            ...this.state,
+            settedTime: this.state.settedTime + 60,
+            remainingTime: this.state.remainingTime + 60
+        });
+    };
 
     render() {
         return (
